@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apple
+
+spec:
+  containers:
+    - name: apple
+      image: shaharyar07/apple:1.0
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: apple-clusterip
+spec:
+  selector:
+    app: apple
+  ports:
+    - name: apple
+      protocol: TCP
+      port: 5100
+      targetPort: 5100
