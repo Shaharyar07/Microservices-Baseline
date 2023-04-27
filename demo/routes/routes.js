@@ -7,6 +7,8 @@ router.get("/api/demo/get", (req, res) => {
 });
 router.post("/api/demo/post", (req, res) => {
   console.log("POST /api/demo/post");
+  res.json({ message: "Hello from server!" });
+
 });
 
 export { router };
