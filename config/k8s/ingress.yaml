@@ -13,6 +13,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: demo-service
+                name: demo-clusterip
                 port:
                   number: 5000
